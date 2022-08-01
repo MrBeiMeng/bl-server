@@ -79,8 +79,8 @@ public class SwaggerConfig {
 //                .host(swaggerProperties.getTryHost())
                 // 选择哪些接口作为swagger的doc发布
                 .select()
-                .apis(RequestHandlerSelectors.any())
-//                .apis(RequestHandlerSelectors.basePackage("club.beimeng")) // 指定扫描包
+//                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("info.baolong")) // 指定扫描包
                 .paths(PathSelectors.any())
                 .build()
 
