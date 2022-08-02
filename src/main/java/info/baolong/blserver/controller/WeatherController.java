@@ -26,22 +26,22 @@ public class WeatherController {
 
     @GetMapping("weather_minutely")
     public String weatherMinutely(){
-        return weatherService.weatherNowSimple();
+        return weatherService.weatherMinutelySimple();
     }
 
     @GetMapping("weather_today")
     public String weatherToday(){
-        return weatherService.weatherNowSimple();
+        return weatherService.weatherDaySimple(0);
     }
 
     @GetMapping("weather_tomorrow")
     public String weatherTomorrow(){
-        return weatherService.weatherNowSimple();
+        return weatherService.weatherDaySimple(1);
     }
 
     @GetMapping("weather_changing")
     public String weatherChanging(){
-        return weatherService.weatherNowSimple();
+        return weatherService.weatherMinutelySimple();
     }
 
 }
