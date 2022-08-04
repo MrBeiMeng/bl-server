@@ -79,19 +79,19 @@ public class WeatherServiceImpl extends BaseWeatherService implements WeatherSer
         stringBuilder.append(String.format("未来%s小时天气变化", hours));
         String lastValue = "";
         for (Skycon skycon : hourly.getSkycon()) {
-            if (!Objects.equals(lastValue, skycon.getValue())){
+            if (!lastValue.equals(skycon.getValue())){
                 String strDateFormat = "HH:mm";
                 SimpleDateFormat sdf = new SimpleDateFormat(strDateFormat);
                 if (lastValue.length() != 0){
-                    stringBuilder.append(String.format("%s转%s |", sdf.format(new Date()),skycon.toChinese()));
+                    stringBuilder.append(String.format("%s转%s |", sdf.format(skycon.getDatetime()),skycon.toChinese()));
                 }else {
-                    stringBuilder.append(String.format("%s%s|", sdf.format(new Date()),skycon.toChinese()));
+                    stringBuilder.append(String.format("%s%s|", sdf.format(skycon.getDatetime()),skycon.toChinese()));
                 }
                 lastValue = skycon.getValue();
             }
         }
 
-        return stringBuilder.toString();
+        return hourly.getDescription() + "\n备注：" + stringBuilder;
     }
 
     /**

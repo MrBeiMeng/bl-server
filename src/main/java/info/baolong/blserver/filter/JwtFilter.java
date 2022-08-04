@@ -49,7 +49,7 @@ public class JwtFilter extends AccessControlFilter {
                 e.printStackTrace();
                 return false;
             }
-            System.out.println("token 有效");
+//            System.out.println("token 有效");
             return true;
         }
         return false;

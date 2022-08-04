@@ -29,6 +29,11 @@ public class WeatherController {
         return weatherService.weatherMinutelySimple();
     }
 
+    @GetMapping("weather_hourly_change")
+    public String weatherHourly(){
+        return weatherService.weatherHourlySimple(12);
+    }
+
     @GetMapping("weather_today")
     public String weatherToday(){
         return weatherService.weatherDaySimple(0);

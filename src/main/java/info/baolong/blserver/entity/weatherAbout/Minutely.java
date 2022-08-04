@@ -2,6 +2,8 @@
   * Copyright 2022 json.cn 
   */
 package info.baolong.blserver.entity.weatherAbout;
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -10,54 +12,12 @@ import java.util.List;
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
  */
+@Data
 public class Minutely {
-
     private String status;
     private String datasource;
-    private List<Integer> precipitation_2h;
-    private List<Integer> precipitation;
-    private List<Integer> probability;
+    private List<Double> precipitation_2h;
+    private List<Double> precipitation;
+    private List<Double> probability;
     private String description;
-    public void setStatus(String status) {
-         this.status = status;
-     }
-     public String getStatus() {
-         return status;
-     }
-
-    public void setDatasource(String datasource) {
-         this.datasource = datasource;
-     }
-     public String getDatasource() {
-         return datasource;
-     }
-
-    public void setPrecipitation_2h(List<Integer> precipitation_2h) {
-         this.precipitation_2h = precipitation_2h;
-     }
-     public List<Integer> getPrecipitation_2h() {
-         return precipitation_2h;
-     }
-
-    public void setPrecipitation(List<Integer> precipitation) {
-         this.precipitation = precipitation;
-     }
-     public List<Integer> getPrecipitation() {
-         return precipitation;
-     }
-
-    public void setProbability(List<Integer> probability) {
-         this.probability = probability;
-     }
-     public List<Integer> getProbability() {
-         return probability;
-     }
-
-    public void setDescription(String description) {
-         this.description = description;
-     }
-     public String getDescription() {
-         return description;
-     }
-
 }
