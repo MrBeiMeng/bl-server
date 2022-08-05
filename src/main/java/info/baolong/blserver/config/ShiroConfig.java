@@ -28,7 +28,7 @@ public class ShiroConfig {
 
 
     //3、ShiroFilterFactoryBean->Subject subject是用户主题，进入到securitymanager中
-    @Bean
+    @Bean(name = "shiroFilterFactoryBean")
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(){
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         //关联securityManager
