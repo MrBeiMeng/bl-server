@@ -48,6 +48,7 @@ public class ShiroConfig {
             role:拥有某个角色权限才能访问
          */
         filterRuleMap.put("/bl_server/auth/login","anon");
+        filterRuleMap.put("/bl_server/comments/get-by-type/**","anon");
 //        filterRuleMap.put("/bl_server/auth/register","anon"); // 登录才可注册系统
         //放行Swagger2页面，需要放行这些
         filterRuleMap.put("/swagger-ui/index.html","anon");
