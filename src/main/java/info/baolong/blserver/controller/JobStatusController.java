@@ -1,6 +1,7 @@
 package info.baolong.blserver.controller;
 
 
+import info.baolong.blserver.entity.JobStatus;
 import info.baolong.blserver.service.JobStatusService;
 import info.baolong.blserver.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,8 @@ public class JobStatusController {
 
     @GetMapping("/get-all")
     public R getJobStatus(){
-        return R.ok().data("rows",jobStatusService.list());
+        List<JobStatus> list = jobStatusService.PriorityOrderList();
+        return R.ok().data("rows",list);
     }
 }
 

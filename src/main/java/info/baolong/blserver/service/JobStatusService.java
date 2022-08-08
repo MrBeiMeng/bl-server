@@ -3,6 +3,8 @@ package info.baolong.blserver.service;
 import info.baolong.blserver.entity.JobStatus;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 求职记录 服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface JobStatusService extends IService<JobStatus> {
 
+    List<JobStatus> PriorityOrderList();
 }
