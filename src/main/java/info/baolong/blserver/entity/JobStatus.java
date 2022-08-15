@@ -25,11 +25,17 @@ public class JobStatus implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-      @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     @ApiModelProperty(value = "公司")
     private String company;
+
+    @ApiModelProperty(value = "公司logo")
+    private String logo;
+
+    @ApiModelProperty(value = "公司规模")
+    private String companySize;
 
     @ApiModelProperty(value = "投递状态 2 已投递 1 未投递")
     private Integer postSituation;
